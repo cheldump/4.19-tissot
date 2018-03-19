@@ -16,6 +16,12 @@ menuconfig RC_CORE
 if RC_CORE
 source "drivers/media/rc/keymaps/Kconfig"
 
+config SPI_PEELIR
+	tristate "PEELIR"
+	default y
+	---help---
+	   Enable this option if you use peelir
+
 config LIRC
 	bool "LIRC user interface"
 	depends on RC_CORE
