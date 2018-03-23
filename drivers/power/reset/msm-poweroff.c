@@ -281,6 +281,7 @@ static void store_kaslr_offset(void)
 #endif /* CONFIG_RANDOMIZE_BASE */
 
 static void setup_dload_mode_support(void)
+
 {
 	int ret;
 
