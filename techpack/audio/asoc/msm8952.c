@@ -69,17 +69,14 @@ static int msm8952_dig_mclk_event(struct snd_soc_dapm_widget *w,
 			      struct snd_kcontrol *kcontrol, int event);
 static int msm8952_wsa_switch_event(struct snd_soc_dapm_widget *w,
 			      struct snd_kcontrol *kcontrol, int event);
-<<<<<<< HEAD
 static int msm_dmic_event(struct snd_soc_dapm_widget *w,
 			  struct snd_kcontrol *kcontrol, int event);
-=======
 
 #ifdef CONFIG_MACH_XIAOMI_TISSOT
 int ext_pa_gpio = 0;
 int ext_pa_status = 0;
 #endif
 
->>>>>>> b930509d16fc (techpack: Import initial changes for Xiaomi msm8953)
 /*
  * Android L spec
  * Need to report LINEIN
@@ -3598,7 +3595,7 @@ parse_mclk_freq:
 	}
 
 	pdata->spk_ext_pa_gpio_p = of_parse_phandle(pdev->dev.of_node,
-							spk_ext_pa, 0);
+							"qcom,cdc-ext-pa-gpios", 0);
 	ret = is_us_eu_switch_gpio_support(pdev, pdata);
 	if (ret < 0) {
 		pr_err("%s: failed to is_us_eu_switch_gpio_support %d\n",
