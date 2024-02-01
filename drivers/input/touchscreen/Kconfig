@@ -1376,7 +1376,6 @@ config TOUCHSCREEN_SYNAPTICS_DSX
 	  module will be called synaptics_dsx.
 
 source "drivers/input/touchscreen/synaptics_dsx/Kconfig"
-<<<<<<< HEAD
 
 config TOUCHSCREEN_SYNAPTICS_TCM
 	bool "Synaptics TCM Touchscreen Driver"
@@ -1391,10 +1390,6 @@ config TOUCHSCREEN_SYNAPTICS_TCM
 	  module will be called synaptics_tcm.
 
 source "drivers/input/touchscreen/synaptics_tcm/Kconfig"
-
-source "drivers/input/touchscreen/focaltech_touch/Kconfig"
-=======
->>>>>>> 7a9994868559 (drivers: input: touchscreen: Add ft8716 and tdp4310 tissot drivers)
 
 source "drivers/input/touchscreen/nt36xxx/Kconfig"
 

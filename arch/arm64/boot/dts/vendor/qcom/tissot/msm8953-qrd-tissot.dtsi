@@ -199,6 +199,7 @@
 		peel_ir,spi-mode = <0>;
 		peel_ir,peel-field = <2345>;
 		status = "ok";
+		#gpio-cells = <2>;
 	};
 };
 
