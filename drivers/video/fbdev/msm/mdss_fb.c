@@ -116,8 +116,7 @@ static int mdss_fb_send_panel_event(struct msm_fb_data_type *mfd,
 					int event, void *arg);
 static void mdss_fb_set_mdp_sync_pt_threshold(struct msm_fb_data_type *mfd,
 		int type);
-<<<<<<< HEAD
-=======
+
 #ifdef CONFIG_MACH_XIAOMI_TISSOT
 #define WAIT_RESUME_TIMEOUT 200
 struct fb_info *prim_fbi;
@@ -151,8 +150,7 @@ static void prim_panel_off_delayed_work(struct work_struct *work)
 void mdss_fb_no_update_notify_timer_cb(unsigned long data)
 {
 	struct msm_fb_data_type *mfd = (struct msm_fb_data_type *)data;
->>>>>>> 91d366106386 (driver: video: mdss: Import tissot changes)
-
+}
 static inline void __user *to_user_ptr(uint64_t address)
 {
 	return (void __user *)(uintptr_t)address;
@@ -2175,8 +2173,6 @@ static int mdss_fb_blank(int blank_mode, struct fb_info *info)
 	struct mdss_panel_data *pdata;
 	struct msm_fb_data_type *mfd = (struct msm_fb_data_type *)info->par;
 
-<<<<<<< HEAD
-=======
 	start = ktime_get();
 
 #ifdef CONFIG_MACH_XIAOMI_TISSOT
@@ -2189,7 +2185,6 @@ static int mdss_fb_blank(int blank_mode, struct fb_info *info)
 	}
 #endif
 
->>>>>>> 91d366106386 (driver: video: mdss: Import tissot changes)
 	ret = mdss_fb_pan_idle(mfd);
 	if (ret) {
 		pr_warn("mdss_fb_pan_idle for fb%d failed. ret=%d\n",
