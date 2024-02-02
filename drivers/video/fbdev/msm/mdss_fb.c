@@ -2168,21 +2168,6 @@ static int mdss_fb_blank(int blank_mode, struct fb_info *info)
 	struct mdss_panel_data *pdata;
 	struct msm_fb_data_type *mfd = (struct msm_fb_data_type *)info->par;
 
-<<<<<<< HEAD
-=======
-	start = ktime_get();
-
-#ifdef CONFIG_MACH_XIAOMI_TISSOT
-	if ((info == prim_fbi) && (blank_mode == FB_BLANK_UNBLANK) &&
-		atomic_read(&prim_panel_is_on)) {
-		atomic_set(&prim_panel_is_on, false);
-		__pm_relax(&prim_panel_wakelock);
-		cancel_delayed_work_sync(&prim_panel_work);
-		return 0;
-	}
-#endif
-
->>>>>>> 91d366106386 (driver: video: mdss: Import tissot changes)
 	ret = mdss_fb_pan_idle(mfd);
 	if (ret) {
 		pr_warn("mdss_fb_pan_idle for fb%d failed. ret=%d\n",
